@@ -4,6 +4,7 @@
 
 [![Tag](https://img.shields.io/github/v/tag/PETERS820-art/Project_ops?label=version&color=blue)](https://github.com/PETERS820-art/Project_ops/tags)
 [![License](https://img.shields.io/github/license/PETERS820-art/Project_ops)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20only-lightgrey)](https://github.com/PETERS820-art/Project_ops)
 
 `project-ops` 是一个面向 OpenClaw 的长期项目运维技能，统一管理 `.projects/` 下的项目状态、执行日志、下一步动作和日常推进建议。
 
@@ -12,6 +13,8 @@
 - 🎯 **SOP 分级** — 自动检测项目复杂度（Solo / Team / Parallel）
 - 🤝 **多 Agent 协作** — 支持并发开发、文件锁、审批门禁
 - 🔗 **github-repo-ops 集成** — 一键创建 GitHub 仓库作为项目前置
+
+> ⚠️ **Platform**: Windows only (PowerShell scripts). macOS/Linux support planned for v1.6.
 
 ---
 
@@ -209,13 +212,27 @@ powershell -File skills/project-ops/scripts/project.ps1 board my-project
 
 ---
 
+## Dependencies
+
+| Dependency | Required | Version | Purpose |
+|------------|----------|---------|---------|
+| **github-repo-ops** | Optional ⭐ | v1.0.0+ | One-click GitHub repo creation |
+| **gh CLI** | Required | latest | GitHub API operations |
+| **git** | Required | latest | Version control |
+| **PowerShell** | Required | 5.1+ | Script runtime (Windows) |
+
+> ⭐ **Recommended**: Install `github-repo-ops` skill for seamless repo creation workflow.
+
 ## Compatibility
 
-- **OS**: Windows (PowerShell)
+| Platform | Status | Notes |
+|----------|--------|-------|
+| **Windows** | ✅ Supported | PowerShell 5.1+ required |
+| **macOS** | ❌ Not supported | Planned for v1.6 (bash wrapper) |
+| **Linux** | ❌ Not supported | Planned for v1.6 (bash wrapper) |
+
 - **Runtime**: OpenClaw gateway
-- **Dependencies**: 
-  - `gh` CLI (for GitHub operations)
-  - `github-repo-ops` skill v1.0.0+ (optional, for repo creation)
+- **OS**: Windows only (PowerShell scripts)
 
 ---
 
