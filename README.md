@@ -2,7 +2,7 @@
 
 > **v1.5.0** — 多 Agent 协作版 | [Changelog](CHANGELOG.md) | [github-repo-ops](https://github.com/PETERS820-art/github-repo-ops)
 
-[![Release](https://img.shields.io/github/v/release/PETERS820-art/Project_ops?label=version&color=blue)](https://github.com/PETERS820-art/Project_ops/releases)
+[![Tag](https://img.shields.io/github/v/tag/PETERS820-art/Project_ops?label=version&color=blue)](https://github.com/PETERS820-art/Project_ops/tags)
 [![License](https://img.shields.io/github/license/PETERS820-art/Project_ops)](LICENSE)
 
 `project-ops` 是一个面向 OpenClaw 的长期项目运维技能，统一管理 `.projects/` 下的项目状态、执行日志、下一步动作和日常推进建议。
