@@ -2,25 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [1.4.0] - 2026-03-24
+## [1.5.0] - 2026-03-25
 
 ### Added
-- Published reusable `project-ops` OpenClaw skill source under `project-ops/`.
-- Added distributable package `dist/project-ops.skill`.
-- Added OpenClaw-friendly installation and usage guide in `README.md`.
-- Added `LICENSE` and `LICENCE` files (MIT).
-- Added XiaoZ-derived documentation standards:
-  - `project-ops/references/project-doc-standards.md`
-  - templates for `MASTER_PLAN`, `NEXT_SESSION_PLAN`, `IMPLEMENTATION_REPORT`
-- Enhanced `project-ops` init flow to scaffold:
-  - `.projects/<id>/MASTER_PLAN.md`
-  - `.projects/<id>/NEXT_SESSION_PLAN.md`
+- **SOP Levels**: Auto-detected project modes (Solo/Team/Parallel)
+- **CL/PR Workflow**: Full change request and pull request lifecycle
+  - `cl-new/claim/status/ready/list` commands
+  - `pr-open/checks/approve/merge` commands
+  - `board` command for project overview
+- **github-repo-ops integration**: Repository creation as prerequisite
+- **Documentation**: `cl-pr-workflow.md` guide
+- **Auto branch naming**: `agent/<name>/cl-<id>` pattern
 
-### Security
-- Ran plaintext secret/token scan on package and repo content before publish.
-- No plaintext key/token found in released artifacts.
+### Changed
+- `repoPath` now required for `project init`
+- Enhanced project.json schema with `mode`, `repoStatus` fields
+- Split CL/PR logic into separate `project-cl.ps1` script
 
-[1.4.0]: https://github.com/PETERS820-art/Project_ops/releases/tag/v1.4.0
+### Fixed
+- PowerShell variable reference syntax in CL/PR engine
+- Review counting logic for merge approval checks
+
+### Dependencies
+- Requires `github-repo-ops` skill for repo creation (v1.0.0+)
+
+## [1.4.0] - 2026-03-24
+- Initial release with project management basics
+
+[1.5.0]: https://github.com/PETERS820-art/Project_ops/releases/tag/v1.5.0
